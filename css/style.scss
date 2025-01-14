@@ -1,0 +1,163 @@
+$violet: #7541c8;
+$dark-grayish-blue: #48556a;
+$dark-blackish-blue: #19212e;
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$half-white: rgba(255, 255, 255, 0.7);
+$qtr-white: rgba(255, 255, 255, 0.4);
+$half-black: rgba(0, 0, 0, 0.7);
+$qtr-black: rgba(0, 0, 0, 0.4);
+$light-gray: #cfcfcf;
+$light-grayish-blue: #ecf2f8;
+
+body {
+  background: $light-grayish-blue;
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", serif;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+h2 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.white {
+  color: $white;
+}
+
+.black {
+  color: $black;
+}
+
+.wrapper {
+  margin: 20px;
+  display: grid;
+  gap: 20px;
+}
+
+.test-card {
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 60px rgb(0 0 0 / 0.1);
+  img {
+    height: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid white;
+  }
+}
+
+.card1 {
+  background: $violet url(../images/bg-pattern-quotation.svg) no-repeat;
+  background-position-x: 80%;
+}
+
+.card2 {
+  background: $dark-grayish-blue;
+}
+
+.card3 {
+  background: $white;
+}
+
+.card4 {
+  background: $dark-blackish-blue;
+}
+
+.card5 {
+  background: $white;
+}
+
+.reviewer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.review-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.review-title-white {
+  color: $white;
+}
+
+.review-title-black {
+  color: $black;
+}
+
+.review-p {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.review-p-white {
+  color: $qtr-white;
+}
+
+.review-p-black {
+  color: $qtr-black;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 580px) {
+  .wrapper {
+    margin: 50px;
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+  .card1 {
+    grid-column: 1 / span 2;
+  }
+  .card4,
+  .card5 {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width: 960px) {
+  .wrapper {
+    margin: 100px;
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+  }
+
+  .card4 {
+    grid-column: 2 / span 2;
+  }
+
+  .card5 {
+    grid-column: span 3;
+  }
+}
+
+@media (min-width: 1238px) {
+  .wrapper {
+    margin: 140px;
+    grid-template-columns: repeat(4, minmax(160px, 1fr));
+  }
+
+  .card5 {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 2;
+  }
+}
